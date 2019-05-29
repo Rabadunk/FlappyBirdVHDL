@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<LOG_ROOT>
+	<PROJECT NAME="miniproject">
+		<CBX_INST_ENTRY INSTANCE_NAME="|miniproject|char_rom:inst4|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_8n91.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|miniproject|pll:inst2|altpll:altpll_component" CBX_FILE_NAME="pll_altpll.v"/>
+	</PROJECT>
+</LOG_ROOT>
