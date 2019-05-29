@@ -1,5 +1,5 @@
 Analysis & Synthesis report for miniproject
-Wed May 29 14:57:13 2019
+Wed May 29 16:45:49 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -19,18 +19,17 @@ Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
  11. State Machine - |miniproject|MOUSE:inst7|mouse_state
  12. User-Specified and Inferred Latches
  13. Registers Removed During Synthesis
- 14. Removed Registers Triggering Further Register Optimizations
- 15. General Register Statistics
- 16. Inverted Register Statistics
- 17. Multiplexer Restructuring Statistics (Restructuring Performed)
- 18. Source assignments for char_rom:inst4|altsyncram:altsyncram_component|altsyncram_8n91:auto_generated
- 19. Parameter Settings for User Entity Instance: game:inst
- 20. Parameter Settings for User Entity Instance: pll:inst2|altpll:altpll_component
- 21. Parameter Settings for User Entity Instance: char_rom:inst4|altsyncram:altsyncram_component
- 22. altpll Parameter Settings by Entity Instance
- 23. altsyncram Parameter Settings by Entity Instance
- 24. Elapsed Time Per Partition
- 25. Analysis & Synthesis Messages
+ 14. General Register Statistics
+ 15. Inverted Register Statistics
+ 16. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 17. Source assignments for char_rom:inst4|altsyncram:altsyncram_component|altsyncram_8n91:auto_generated
+ 18. Parameter Settings for User Entity Instance: game:inst
+ 19. Parameter Settings for User Entity Instance: pll:inst2|altpll:altpll_component
+ 20. Parameter Settings for User Entity Instance: char_rom:inst4|altsyncram:altsyncram_component
+ 21. altpll Parameter Settings by Entity Instance
+ 22. altsyncram Parameter Settings by Entity Instance
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
 
 
 
@@ -56,15 +55,15 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                    ;
 +------------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 29 14:57:13 2019      ;
+; Analysis & Synthesis Status        ; Successful - Wed May 29 16:45:49 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                ;
 ; Top-level Entity Name              ; miniproject                                ;
 ; Family                             ; Cyclone III                                ;
-; Total logic elements               ; 1,124                                      ;
-;     Total combinational functions  ; 1,049                                      ;
-;     Dedicated logic registers      ; 260                                        ;
-; Total registers                    ; 260                                        ;
+; Total logic elements               ; 1,096                                      ;
+;     Total combinational functions  ; 1,012                                      ;
+;     Dedicated logic registers      ; 285                                        ;
+; Total registers                    ; 285                                        ;
 ; Total pins                         ; 37                                         ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096                                      ;
@@ -210,20 +209,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+------------------------------------------------------------------------------+
 ; Resource                                    ; Usage                                                                        ;
 +---------------------------------------------+------------------------------------------------------------------------------+
-; Estimated Total logic elements              ; 1,124                                                                        ;
+; Estimated Total logic elements              ; 1,096                                                                        ;
 ;                                             ;                                                                              ;
-; Total combinational functions               ; 1049                                                                         ;
+; Total combinational functions               ; 1012                                                                         ;
 ; Logic element usage by number of LUT inputs ;                                                                              ;
-;     -- 4 input functions                    ; 503                                                                          ;
-;     -- 3 input functions                    ; 312                                                                          ;
-;     -- <=2 input functions                  ; 234                                                                          ;
+;     -- 4 input functions                    ; 497                                                                          ;
+;     -- 3 input functions                    ; 327                                                                          ;
+;     -- <=2 input functions                  ; 188                                                                          ;
 ;                                             ;                                                                              ;
 ; Logic elements by mode                      ;                                                                              ;
-;     -- normal mode                          ; 784                                                                          ;
-;     -- arithmetic mode                      ; 265                                                                          ;
+;     -- normal mode                          ; 777                                                                          ;
+;     -- arithmetic mode                      ; 235                                                                          ;
 ;                                             ;                                                                              ;
-; Total registers                             ; 260                                                                          ;
-;     -- Dedicated logic registers            ; 260                                                                          ;
+; Total registers                             ; 285                                                                          ;
+;     -- Dedicated logic registers            ; 285                                                                          ;
 ;     -- I/O registers                        ; 0                                                                            ;
 ;                                             ;                                                                              ;
 ; I/O pins                                    ; 37                                                                           ;
@@ -233,9 +232,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;     -- PLLs                                 ; 1                                                                            ;
 ;                                             ;                                                                              ;
 ; Maximum fan-out node                        ; pll:inst2|altpll:altpll_component|pll_altpll:auto_generated|wire_pll1_clk[0] ;
-; Maximum fan-out                             ; 119                                                                          ;
-; Total fan-out                               ; 4288                                                                         ;
-; Average fan-out                             ; 3.08                                                                         ;
+; Maximum fan-out                             ; 116                                                                          ;
+; Total fan-out                               ; 4318                                                                         ;
+; Average fan-out                             ; 3.12                                                                         ;
 +---------------------------------------------+------------------------------------------------------------------------------+
 
 
@@ -244,20 +243,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
-; |miniproject                              ; 1049 (1)          ; 260 (0)      ; 4096        ; 0            ; 0       ; 0         ; 37   ; 0            ; |miniproject                                                                               ; work         ;
-;    |MOUSE:inst7|                          ; 82 (82)           ; 89 (89)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|MOUSE:inst7                                                                   ; work         ;
-;    |char_rom:inst4|                       ; 2 (2)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|char_rom:inst4                                                                ; work         ;
+; |miniproject                              ; 1012 (1)          ; 285 (0)      ; 4096        ; 0            ; 0       ; 0         ; 37   ; 0            ; |miniproject                                                                               ; work         ;
+;    |MOUSE:inst7|                          ; 112 (112)         ; 117 (117)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|MOUSE:inst7                                                                   ; work         ;
+;    |char_rom:inst4|                       ; 4 (4)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|char_rom:inst4                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|char_rom:inst4|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_8n91:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|char_rom:inst4|altsyncram:altsyncram_component|altsyncram_8n91:auto_generated ; work         ;
-;    |game:inst|                            ; 424 (363)         ; 150 (93)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game:inst                                                                     ; work         ;
-;       |VGA_SYNC:SYNC|                     ; 61 (61)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game:inst|VGA_SYNC:SYNC                                                       ; work         ;
+;    |game:inst|                            ; 348 (288)         ; 149 (92)     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game:inst                                                                     ; work         ;
+;       |VGA_SYNC:SYNC|                     ; 60 (60)           ; 57 (57)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game:inst|VGA_SYNC:SYNC                                                       ; work         ;
 ;    |game_fsm:inst9|                       ; 15 (15)           ; 7 (7)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game_fsm:inst9                                                                ; work         ;
-;    |game_text:inst11|                     ; 496 (496)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game_text:inst11                                                              ; work         ;
-;    |lsfr:inst5|                           ; 14 (14)           ; 14 (14)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|lsfr:inst5                                                                    ; work         ;
+;    |game_text:inst11|                     ; 506 (506)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|game_text:inst11                                                              ; work         ;
+;    |lsfr:inst5|                           ; 12 (12)           ; 12 (12)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|lsfr:inst5                                                                    ; work         ;
 ;    |pll:inst2|                            ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|pll:inst2                                                                     ; work         ;
 ;       |altpll:altpll_component|           ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|pll:inst2|altpll:altpll_component                                             ; work         ;
 ;          |pll_altpll:auto_generated|      ; 0 (0)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|pll:inst2|altpll:altpll_component|pll_altpll:auto_generated                   ; work         ;
-;    |sevenseg_decoder:inst1|               ; 8 (8)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|sevenseg_decoder:inst1                                                        ; work         ;
+;    |sevenseg_decoder:inst1|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|sevenseg_decoder:inst1                                                        ; work         ;
 ;    |sevenseg_decoder:inst3|               ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |miniproject|sevenseg_decoder:inst3                                                        ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -309,27 +308,19 @@ Encoding Type:  One-Hot
 +-------------------------------+---------------------------+--------------------------+-------------------------------+---------------------------+--------------------------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------+
-; User-Specified and Inferred Latches                                                                           ;
-+-----------------------------------------------------+--------------------------------+------------------------+
-; Latch Name                                          ; Latch Enable Signal            ; Free of Timing Hazards ;
-+-----------------------------------------------------+--------------------------------+------------------------+
-; game_text:inst11|v_font_col[1]                      ; game_text:inst11|v_font_row[2] ; yes                    ;
-; game_text:inst11|v_font_col[0]                      ; game_text:inst11|v_font_row[2] ; yes                    ;
-; game_text:inst11|v_font_col[2]                      ; game_text:inst11|v_font_row[2] ; yes                    ;
-; game:inst|Pipe_Random[0]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[1]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[2]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[3]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[4]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[5]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[6]                            ; game:inst|Display              ; yes                    ;
-; game:inst|Pipe_Random[7]                            ; game:inst|Display              ; yes                    ;
-; game_text:inst11|v_font_row[0]                      ; game_text:inst11|v_font_row[2] ; yes                    ;
-; game_text:inst11|v_font_row[1]                      ; game_text:inst11|v_font_row[2] ; yes                    ;
-; game_text:inst11|v_font_row[2]                      ; game_text:inst11|v_font_row[2] ; yes                    ;
-; Number of user-specified and inferred latches = 14  ;                                ;                        ;
-+-----------------------------------------------------+--------------------------------+------------------------+
++--------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                          ;
++----------------------------------------------------+--------------------------------+------------------------+
+; Latch Name                                         ; Latch Enable Signal            ; Free of Timing Hazards ;
++----------------------------------------------------+--------------------------------+------------------------+
+; game_text:inst11|v_font_col[1]                     ; game_text:inst11|v_font_row[2] ; yes                    ;
+; game_text:inst11|v_font_col[0]                     ; game_text:inst11|v_font_row[2] ; yes                    ;
+; game_text:inst11|v_font_col[2]                     ; game_text:inst11|v_font_row[2] ; yes                    ;
+; game_text:inst11|v_font_row[0]                     ; game_text:inst11|v_font_row[2] ; yes                    ;
+; game_text:inst11|v_font_row[1]                     ; game_text:inst11|v_font_row[2] ; yes                    ;
+; game_text:inst11|v_font_row[2]                     ; game_text:inst11|v_font_row[2] ; yes                    ;
+; Number of user-specified and inferred latches = 6  ;                                ;                        ;
++----------------------------------------------------+--------------------------------+------------------------+
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
@@ -338,7 +329,6 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------+---------------------------------------------------+
 ; Register name                            ; Reason for Removal                                ;
 +------------------------------------------+---------------------------------------------------+
-; lsfr:inst5|RANDOM[8,9]                   ; Stuck at GND due to stuck port data_in            ;
 ; MOUSE:inst7|CHAROUT[4..7]                ; Stuck at VCC due to stuck port data_in            ;
 ; MOUSE:inst7|CHAROUT[3]                   ; Stuck at GND due to stuck port data_in            ;
 ; MOUSE:inst7|CHAROUT[2]                   ; Stuck at VCC due to stuck port data_in            ;
@@ -348,35 +338,14 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; game:inst|VGA_SYNC:SYNC|video_on_v[1..3] ; Merged with game:inst|VGA_SYNC:SYNC|video_on_v[0] ;
 ; game:inst|VGA_SYNC:SYNC|video_on_h[1..3] ; Merged with game:inst|VGA_SYNC:SYNC|video_on_h[0] ;
 ; game:inst|blue_data[1..3]                ; Merged with game:inst|blue_data[0]                ;
-; game:inst|green_data[1,2]                ; Merged with game:inst|green_data[0]               ;
+; game:inst|green_data[1..3]               ; Merged with game:inst|green_data[0]               ;
 ; game:inst|red_data[3]                    ; Merged with game:inst|red_data[1]                 ;
 ; game:inst|red_data[2]                    ; Merged with game:inst|red_data[0]                 ;
-; game:inst|Pipe2_X_pos[1]                 ; Merged with game:inst|Pipe1_X_pos[1]              ;
-; game:inst|Pipe2_X_pos[2]                 ; Merged with game:inst|Pipe1_X_pos[2]              ;
-; game:inst|Pipe2_X_pos[3]                 ; Merged with game:inst|Pipe1_X_pos[3]              ;
-; game:inst|Pipe2_X_pos[4]                 ; Merged with game:inst|Pipe1_X_pos[4]              ;
-; game:inst|Pipe2_X_pos[5]                 ; Merged with game:inst|Pipe1_X_pos[5]              ;
-; game:inst|Pipe2_X_pos[6]                 ; Merged with game:inst|Pipe1_X_pos[6]              ;
-; game:inst|Pipe2_X_pos[7]                 ; Merged with game:inst|Pipe1_X_pos[7]              ;
-; game:inst|Pipe2_X_pos[8]                 ; Merged with game:inst|Pipe1_X_pos[8]              ;
-; game:inst|Pipe2_X_pos[9]                 ; Merged with game:inst|Pipe1_X_pos[9]              ;
 ; MOUSE:inst7|cursor_row[9]                ; Stuck at GND due to stuck port data_in            ;
 ; game:inst|Ball_X_pos[9]                  ; Stuck at GND due to stuck port data_in            ;
 ; game:inst|VGA_SYNC:SYNC|pixel_row[9]     ; Stuck at GND due to stuck port data_in            ;
-; lsfr:inst5|TEMP_RANDOM[6]                ; Merged with lsfr:inst5|RANDOM[7]                  ;
-; lsfr:inst5|TEMP_RANDOM[5]                ; Merged with lsfr:inst5|RANDOM[6]                  ;
-; Total Number of Removed Registers = 60   ;                                                   ;
+; Total Number of Removed Registers = 48   ;                                                   ;
 +------------------------------------------+---------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                    ;
-+---------------------------+---------------------------+----------------------------------------+
-; Register name             ; Reason for Removal        ; Registers Removed due to This Register ;
-+---------------------------+---------------------------+----------------------------------------+
-; MOUSE:inst7|cursor_row[9] ; Stuck at GND              ; game:inst|Ball_X_pos[9]                ;
-;                           ; due to stuck port data_in ;                                        ;
-+---------------------------+---------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -384,12 +353,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 260   ;
+; Total registers                              ; 285   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 10    ;
+; Number of registers using Synchronous Load   ; 20    ;
 ; Number of registers using Asynchronous Clear ; 42    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 193   ;
+; Number of registers using Clock Enable       ; 219   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -400,16 +369,16 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Inverted Register                       ; Fan out ;
 +-----------------------------------------+---------+
 ; lsfr:inst5|TEMP_RANDOM[7]               ; 3       ;
-; lsfr:inst5|RANDOM[7]                    ; 4       ;
+; lsfr:inst5|TEMP_RANDOM[6]               ; 3       ;
 ; lsfr:inst5|TEMP_RANDOM[3]               ; 4       ;
+; game:inst|Pipe1_X_pos[8]                ; 6       ;
+; game:inst|Pipe1_X_pos[7]                ; 6       ;
+; game:inst|Pipe1_X_pos[5]                ; 8       ;
+; game:inst|Pipe1_X_pos[4]                ; 8       ;
+; game:inst|Pipe1_X_pos[3]                ; 10      ;
 ; game:inst|Ball_Y_pos[3]                 ; 6       ;
 ; game:inst|Ball_Y_pos[2]                 ; 5       ;
 ; game:inst|Ball_Y_pos[1]                 ; 5       ;
-; game:inst|Pipe1_X_pos[8]                ; 7       ;
-; game:inst|Pipe1_X_pos[7]                ; 7       ;
-; game:inst|Pipe1_X_pos[5]                ; 9       ;
-; game:inst|Pipe1_X_pos[4]                ; 9       ;
-; game:inst|Pipe1_X_pos[3]                ; 11      ;
 ; game:inst|life[0]                       ; 3       ;
 ; game:inst|life[2]                       ; 3       ;
 ; game:inst|energy[0]                     ; 1       ;
@@ -433,23 +402,23 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                      ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |miniproject|MOUSE:inst7|new_cursor_row[1]      ;
+; 3:1                ; 20 bits   ; 40 LEs        ; 20 LEs               ; 20 LEs                 ; Yes        ; |miniproject|MOUSE:inst7|new_cursor_row[2]      ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |miniproject|game:inst|red_data[0]              ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |miniproject|game:inst|VGA_SYNC:SYNC|v_count[4] ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |miniproject|game:inst|VGA_SYNC:SYNC|v_count[8] ;
 ; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |miniproject|game:inst|Ball_X_pos[7]            ;
-; 3:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |miniproject|lsfr:inst5|RANDOM[4]               ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |miniproject|game:inst|red_data[1]              ;
-; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |miniproject|game:inst|energy_temp[30]          ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |miniproject|MOUSE:inst7|cursor_row[2]          ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |miniproject|game:inst|Ball_Y_motion[4]         ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; Yes        ; |miniproject|lsfr:inst5|RANDOM[1]               ;
+; 4:1                ; 29 bits   ; 58 LEs        ; 29 LEs               ; 29 LEs                 ; Yes        ; |miniproject|game:inst|energy_temp[7]           ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |miniproject|MOUSE:inst7|cursor_row[0]          ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |miniproject|MOUSE:inst7|cursor_column[1]       ;
+; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |miniproject|game:inst|Ball_Y_motion[6]         ;
 ; 9:1                ; 3 bits    ; 18 LEs        ; 6 LEs                ; 12 LEs                 ; Yes        ; |miniproject|game_fsm:inst9|STATE_OUT[2]        ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |miniproject|game:inst|energy_temp[2]           ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |miniproject|sevenseg_decoder:inst1|LED_out[6]  ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |miniproject|sevenseg_decoder:inst3|LED_out[4]  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |miniproject|sevenseg_decoder:inst1|LED_out[4]  ;
+; 16:1               ; 2 bits    ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; No         ; |miniproject|sevenseg_decoder:inst3|LED_out[6]  ;
 ; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |miniproject|sevenseg_decoder:inst1|LED_out[3]  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |miniproject|sevenseg_decoder:inst3|LED_out[3]  ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |miniproject|sevenseg_decoder:inst3|LED_out[5]  ;
 ; 9:1                ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; No         ; |miniproject|game_fsm:inst9|Selector3           ;
-; 30:1               ; 6 bits    ; 120 LEs       ; 12 LEs               ; 108 LEs                ; No         ; |miniproject|game_text:inst11|v_font_row[0]     ;
+; 30:1               ; 6 bits    ; 120 LEs       ; 12 LEs               ; 108 LEs                ; No         ; |miniproject|game_text:inst11|v_font_col[2]     ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------+
 
 
@@ -960,7 +929,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
-    Info: Processing started: Wed May 29 14:57:07 2019
+    Info: Processing started: Wed May 29 16:45:43 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off miniproject -c miniproject
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vga_sync.vhd
@@ -998,10 +967,11 @@ Info (12021): Found 3 design units, including 1 entities, in source file output_
     Info (12022): Found design unit 2: game-behavior
     Info (12023): Found entity 1: game
 Info (12127): Elaborating entity "miniproject" for the top level hierarchy
-Warning (275011): Block or symbol "GND" of instance "inst10" overlaps another block or symbol
 Info (12128): Elaborating entity "game" for hierarchy "game:inst"
+Warning (10541): VHDL Signal Declaration warning at game.vhd(45): used implicit default value for signal "Pipe2_on" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(47): object "Pipe2_High" assigned a value but never read
 Warning (10540): VHDL Signal Declaration warning at game.vhd(54): used explicit default value for signal "Pipe1_Y_pos" because signal was never assigned a value
-Warning (10540): VHDL Signal Declaration warning at game.vhd(57): used explicit default value for signal "Pipe2_Y_pos" because signal was never assigned a value
+Warning (10036): Verilog HDL or VHDL warning at game.vhd(58): object "Pipe_Random" assigned a value but never read
 Warning (10540): VHDL Signal Declaration warning at game.vhd(64): used explicit default value for signal "Falling_Speed" because signal was never assigned a value
 Warning (10540): VHDL Signal Declaration warning at game.vhd(66): used explicit default value for signal "Pipe_Speed" because signal was never assigned a value
 Warning (10492): VHDL Process Statement warning at game.vhd(99): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
@@ -1010,44 +980,13 @@ Warning (10492): VHDL Process Statement warning at game.vhd(103): signal "Pipe1_
 Warning (10492): VHDL Process Statement warning at game.vhd(104): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at game.vhd(104): signal "Pipe_Width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at game.vhd(106): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(108): signal "Pipe1_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at game.vhd(108): signal "Pipe1_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(110): signal "Pipe1_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Warning (10492): VHDL Process Statement warning at game.vhd(110): signal "Pipe1_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(117): signal "Pipe2_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(117): signal "Pipe_Width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(119): signal "Pipe2_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(121): signal "Pipe2_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(121): signal "Pipe2_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(123): signal "Pipe2_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(123): signal "Pipe2_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(131): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(131): signal "Pipe_Width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(133): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(135): signal "Pipe1_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(135): signal "Pipe1_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(137): signal "Pipe1_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(137): signal "Pipe1_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(144): signal "Pipe2_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(144): signal "Pipe_Width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(146): signal "Pipe2_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(148): signal "Pipe2_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(148): signal "Pipe2_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(148): signal "Pipe_Random" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(150): signal "Pipe2_Y_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(150): signal "Pipe2_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10492): VHDL Process Statement warning at game.vhd(150): signal "Pipe_Random" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
-Warning (10631): VHDL Process Statement warning at game.vhd(85): inferring latch(es) for signal or variable "Pipe_Random", which holds its previous value in one or more paths through the process
-Info (10041): Inferred latch for "Pipe_Random[0]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[1]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[2]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[3]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[4]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[5]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[6]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[7]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[8]" at game.vhd(85)
-Info (10041): Inferred latch for "Pipe_Random[9]" at game.vhd(85)
+Warning (10492): VHDL Process Statement warning at game.vhd(118): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at game.vhd(118): signal "Pipe_Width" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at game.vhd(120): signal "Pipe1_X_pos" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at game.vhd(122): signal "Pipe1_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
+Warning (10492): VHDL Process Statement warning at game.vhd(124): signal "Pipe1_High" is read inside the Process Statement but isn't in the Process Statement's sensitivity list
 Info (12128): Elaborating entity "VGA_SYNC" for hierarchy "game:inst|VGA_SYNC:SYNC"
 Info (12128): Elaborating entity "MOUSE" for hierarchy "MOUSE:inst7"
 Warning (10036): Verilog HDL or VHDL warning at mouse.VHD(25): object "CHARIN" assigned a value but never read
@@ -1198,16 +1137,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "bt2"
-Info (21057): Implemented 1179 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 1151 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 7 input pins
     Info (21059): Implemented 28 output pins
     Info (21060): Implemented 2 bidirectional pins
-    Info (21061): Implemented 1133 logic cells
+    Info (21061): Implemented 1105 logic cells
     Info (21064): Implemented 8 RAM segments
     Info (21065): Implemented 1 PLLs
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 84 warnings
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 64 warnings
     Info: Peak virtual memory: 4719 megabytes
-    Info: Processing ended: Wed May 29 14:57:13 2019
+    Info: Processing ended: Wed May 29 16:45:49 2019
     Info: Elapsed time: 00:00:06
     Info: Total CPU time (on all processors): 00:00:06
 

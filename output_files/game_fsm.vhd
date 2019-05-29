@@ -38,7 +38,7 @@ Architecture RTL of game_fsm is
 					ELSIF LIFE = "000" THEN
 						State <= GAMEOVER;
 						STATE_OUT <= "100";
-						END IF;
+					END IF;
 
 				WHEN PAUSE =>
 					IF SW0='0' THEN 

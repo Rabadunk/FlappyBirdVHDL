@@ -96,69 +96,44 @@ BEGIN
               
             END IF;
               
-				  IF(Pipe1_X_pos < CONV_STD_LOGIC_VECTOR(700, 10) AND unsigned(Pipe1_X_pos) > unsigned(CONV_STD_LOGIC_VECTOR(650, 10))) THEN
+				IF(Pipe1_X_pos < CONV_STD_LOGIC_VECTOR(700, 10) AND unsigned(Pipe1_X_pos) > unsigned(CONV_STD_LOGIC_VECTOR(650, 10))) THEN
 						Pipe_Random <= Random;
-					END IF;
+				END IF;
 				  
 				IF(Pipe1_X_pos > CONV_STD_LOGIC_VECTOR(0, 10) AND unsigned(Pipe1_X_pos) > unsigned(CONV_STD_LOGIC_VECTOR(300, 10))) THEN
               IF (unsigned(Pipe1_X_pos + Pipe_Width) >= unsigned(pixel_column)) AND
               
               (unsigned(Pipe1_X_pos) <= unsigned(pixel_column)) AND
               
-              (Pipe1_Y_pos <= pixel_row + Pipe1_High)AND
-              
-              (Pipe1_Y_pos + Pipe1_High >= pixel_row ) THEN
+						((Pipe1_High >= pixel_row ) OR
+						
+						(Pipe1_High <= pixel_row))THEN
                            
                            Pipe_on <= '1';
               ELSE
                            Pipe_on <= '0';
-              END IF;
-				  
-				  IF (unsigned(Pipe2_X_pos + Pipe_Width) >= unsigned(pixel_column)) AND
-              
-              (unsigned(Pipe2_X_pos) <= unsigned(pixel_column)) AND
-              
-              (Pipe2_Y_pos >= pixel_row + (CONV_STD_LOGIC_VECTOR(480,10)-Pipe2_High))AND
-              
-              (Pipe2_Y_pos + (CONV_STD_LOGIC_VECTOR(480,10)-Pipe2_High) <= pixel_row ) THEN
-                           
-                           Pipe2_on <= '1';
-              ELSE
-                           Pipe2_on <= '0';
               END IF;
 				  
 				ELSE
-				  IF (Pipe1_X_pos + Pipe_Width >= pixel_column) AND
+				  IF 	((Pipe1_X_pos + Pipe_Width >= pixel_column) AND
               
-              (Pipe1_X_pos <= pixel_column) AND
+						(Pipe1_X_pos <= pixel_column)) AND
               
-              (Pipe1_Y_pos <= pixel_row + Pipe1_High)AND
-              
-              (Pipe1_Y_pos + Pipe1_High >= pixel_row ) THEN
+						((Pipe1_High >= pixel_row ) OR
+						
+						(Pipe1_High <= pixel_row))THEN
                            
                            Pipe_on <= '1';
               ELSE
                            Pipe_on <= '0';
               END IF;
 				  
-				  IF (Pipe2_X_pos + Pipe_Width >= pixel_column) AND
-              
-              (Pipe2_X_pos <= pixel_column) AND
-              
-              (Pipe2_Y_pos >= pixel_row + (CONV_STD_LOGIC_VECTOR(480,10)-Pipe2_High) + Pipe_Random)AND
-              
-              (Pipe2_Y_pos + (CONV_STD_LOGIC_VECTOR(480,10)-Pipe2_High) + Pipe_Random <= pixel_row ) THEN
-                           
-                           Pipe2_on <= '1';
-              ELSE
-                           Pipe2_on <= '0';
-              END IF;
 				END IF;
 				  
               
               
-              pixel_row_out <= pixel_row;
-              pixel_column_out <= pixel_column;
+pixel_row_out <= pixel_row;
+pixel_column_out <= pixel_column;
 END process Display;
 
 RGB_SWITCH: Process(Ball_on, Clock)
@@ -242,20 +217,17 @@ if State = "001" then
 			 IF 
 			    (Ball_X_pos <= Pipe1_X_pos + Pipe_Width + Size AND Ball_X_pos >= Pipe1_X_pos - Size AND
 				 Ball_Y_pos <= Pipe1_Y_pos + Pipe1_High + Size)
-				 OR 
-				 (Ball_X_pos <= Pipe2_X_pos + Pipe_Width + Size AND Ball_X_pos >= Pipe2_X_pos - Size AND
-				 Ball_Y_pos >= Pipe2_Y_pos - Pipe2_High - Size + CONV_STD_LOGIC_VECTOR(480,10))
 			 then
-			 In_Pipe <= '1';
+				In_Pipe <= '1';
 			 else In_Pipe <= '0';
 			 END IF;
 			 
 			 IF In_Pipe = '1' and Life_Count = '0' then
-			 life_temp <= life_temp - CONV_STD_LOGIC_VECTOR(1,3);
-			 life <= life_temp;
-			 Life_Count <= '1';
+				life_temp <= life_temp - CONV_STD_LOGIC_VECTOR(1,3);
+				life <= life_temp;
+				Life_Count <= '1';
 			 ELSIF In_Pipe = '0' then
-			 Life_Count <= '0';
+				Life_Count <= '0';
 			 END IF;
 END IF;
 END process Move_Ball;
@@ -263,11 +235,11 @@ END process Move_Ball;
 Move_Pipe: process
 BEGIN 
               -- Move PIPE once every vertical sync
-              WAIT UNTIL vert_sync_int'event and vert_sync_int = '1';
-IF State = "001" then-- <=512 and >446 broken
-						Pipe1_X_pos <= Pipe1_X_pos - Pipe_Speed;
-						Pipe2_X_pos <= Pipe2_X_pos - Pipe_Speed;
-END IF;
+	WAIT UNTIL vert_sync_int'event and vert_sync_int = '1';
+		IF State = "001" then-- <=512 and >446 broken
+			Pipe1_X_pos <= Pipe1_X_pos - Pipe_Speed;
+			Pipe2_X_pos <= Pipe2_X_pos - Pipe_Speed;
+		END IF;
               
 END process Move_Pipe;
 
