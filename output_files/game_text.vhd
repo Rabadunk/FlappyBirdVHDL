@@ -666,57 +666,199 @@ begin
 				end if;
 				
 				
-			elsif state = "001" then
+			elsif state = "001" OR state = "101" then
+					--T
+				if	(state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(95, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(111, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(20, 6);
+				--R
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(111, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(127, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(18, 6);
+					--A
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(127, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(143, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(1, 6);
+					--I
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(143, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(159, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(9, 6);
+					--N
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(159, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(175, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(14, 6);
+				--I
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(175, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(191, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(9, 6);
+					--N
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(191, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(207, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(14, 6);
+				--G
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(207, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(223, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(7, 6);
+				--SPACE
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(224, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(238, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(32, 6);
+				--M  but (40
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(239, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(255, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(13, 6);
+				--O
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(255, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(271, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(15, 6);
+				--D
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(271, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(287, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(4, 6);
+				--E
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(287, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(303, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(5, 6);
+				--SPACE
+				elsif (state = "101") and
+					(pixel_col >= CONV_STD_LOGIC_VECTOR(304, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(319, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(32, 6);
 				
 				
 				--LIFE
 				--L
-				if(pixel_col >= CONV_STD_LOGIC_VECTOR(416, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(448, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(416, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(432, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 					v_character_address := CONV_STD_LOGIC_VECTOR(12, 6);
 				--I
-				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(448, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(480, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(432, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(448, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 					v_character_address := CONV_STD_LOGIC_VECTOR(9, 6);
 				--F
-				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(480, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(512, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(448, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(464, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 					v_character_address := CONV_STD_LOGIC_VECTOR(6, 6);
 				--E
-				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(512, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(544, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(464, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(480, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 					v_character_address := CONV_STD_LOGIC_VECTOR(5, 6);
 				--SPACE
-				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(545, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(575, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(480, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(496, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(32, 6);
+				--SPACE
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(497, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(513, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
+					v_character_address := CONV_STD_LOGIC_VECTOR(32, 6);
+				--SPACE
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(514, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(530, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
+					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 					v_character_address := CONV_STD_LOGIC_VECTOR(32, 6);
 				--0
-				elsif (pixel_col >= CONV_STD_LOGIC_VECTOR(576, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(608, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif (pixel_col >= CONV_STD_LOGIC_VECTOR(526, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(542, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 						if (life <= CONV_STD_LOGIC_VECTOR(0,3)) then
 						v_character_address := CONV_STD_LOGIC_VECTOR(48, 6);
 						elsif (life <= CONV_STD_LOGIC_VECTOR(1,3)) then
@@ -735,16 +877,13 @@ begin
 						v_character_address := CONV_STD_LOGIC_VECTOR(55, 6);
 						end if;
 				--SPACE
-				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(609, 10)) and
-					(pixel_col <= CONV_STD_LOGIC_VECTOR(641, 10)) and
-					(pixel_row >= CONV_STD_LOGIC_VECTOR(0, 10)) and
+				elsif(pixel_col >= CONV_STD_LOGIC_VECTOR(542, 10)) and
+					(pixel_col <= CONV_STD_LOGIC_VECTOR(558, 10)) and
+					(pixel_row >= CONV_STD_LOGIC_VECTOR(15, 10)) and
 					(pixel_row <= CONV_STD_LOGIC_VECTOR(31, 10)) then
-					v_font_row := pixel_row(4 downto 2);
-					v_font_col := pixel_col(4 downto 2);
+					v_font_row := pixel_row(3 downto 1);
+					v_font_col := pixel_col(3 downto 1);
 					v_character_address := CONV_STD_LOGIC_VECTOR(32, 6);
-										
-				
-				
 				
 				
 				--ENERGY

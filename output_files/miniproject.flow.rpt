@@ -1,5 +1,5 @@
 Flow report for miniproject
-Wed May 29 16:46:21 2019
+Thu May 30 12:21:30 2019
 Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +---------------------------------------------------------------------------------+
 ; Flow Summary                                                                    ;
 +------------------------------------+--------------------------------------------+
-; Flow Status                        ; Successful - Wed May 29 16:46:21 2019      ;
+; Flow Status                        ; Successful - Thu May 30 12:21:30 2019      ;
 ; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
 ; Revision Name                      ; miniproject                                ;
 ; Top-level Entity Name              ; miniproject                                ;
 ; Family                             ; Cyclone III                                ;
 ; Device                             ; EP3C16F484C6                               ;
 ; Timing Models                      ; Final                                      ;
-; Total logic elements               ; 1,063 / 15,408 ( 7 % )                     ;
-;     Total combinational functions  ; 1,013 / 15,408 ( 7 % )                     ;
-;     Dedicated logic registers      ; 285 / 15,408 ( 2 % )                       ;
-; Total registers                    ; 285                                        ;
+; Total logic elements               ; 1,561 / 15,408 ( 10 % )                    ;
+;     Total combinational functions  ; 1,503 / 15,408 ( 10 % )                    ;
+;     Dedicated logic registers      ; 334 / 15,408 ( 2 % )                       ;
+; Total registers                    ; 334                                        ;
 ; Total pins                         ; 37 / 347 ( 11 % )                          ;
 ; Total virtual pins                 ; 0                                          ;
 ; Total memory bits                  ; 4,096 / 516,096 ( < 1 % )                  ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 05/29/2019 16:45:43 ;
+; Start date & time ; 05/30/2019 12:20:46 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; miniproject         ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                          ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+--------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 53214321276927.155910514328552 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 53214321276927.155917564635144 ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                           ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)         ; <None>        ; --          ; --             ;
 ; IP_TOOL_NAME                        ; ALTPLL                         ; --            ; --          ; --             ;
@@ -97,12 +97,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:05     ; 1.0                     ; 4708 MB             ; 00:00:05                           ;
-; Fitter                    ; 00:00:18     ; 1.0                     ; 5009 MB             ; 00:00:18                           ;
-; Assembler                 ; 00:00:01     ; 1.0                     ; 4601 MB             ; 00:00:01                           ;
-; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4649 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4574 MB             ; 00:00:02                           ;
-; Total                     ; 00:00:30     ; --                      ; --                  ; 00:00:29                           ;
+; Analysis & Synthesis      ; 00:00:06     ; 1.0                     ; 4707 MB             ; 00:00:07                           ;
+; Fitter                    ; 00:00:22     ; 1.0                     ; 5004 MB             ; 00:00:21                           ;
+; Assembler                 ; 00:00:01     ; 1.0                     ; 4605 MB             ; 00:00:01                           ;
+; TimeQuest Timing Analyzer ; 00:00:04     ; 1.0                     ; 4662 MB             ; 00:00:04                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4577 MB             ; 00:00:02                           ;
+; Total                     ; 00:00:36     ; --                      ; --                  ; 00:00:35                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

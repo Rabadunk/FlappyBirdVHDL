@@ -1,10 +1,19 @@
 
+State Machine - |miniproject|game_fsm:inst9|Prev_State
+Name Prev_State.TRAINING Prev_State.GAMEOVER Prev_State.PAUSE Prev_State.PLAY Prev_State.MENU 
+Prev_State.MENU 0 0 0 0 0 
+Prev_State.PLAY 0 0 0 1 1 
+Prev_State.PAUSE 0 0 1 0 1 
+Prev_State.GAMEOVER 0 1 0 0 1 
+Prev_State.TRAINING 1 0 0 0 1 
+
 State Machine - |miniproject|game_fsm:inst9|State
-Name State.GAMEOVER State.PAUSE State.PLAY State.MENU 
-State.MENU 0 0 0 0 
-State.PLAY 0 0 1 1 
-State.PAUSE 0 1 0 1 
-State.GAMEOVER 1 0 0 1 
+Name State.TRAINING State.GAMEOVER State.PAUSE State.PLAY State.MENU 
+State.MENU 0 0 0 0 0 
+State.PLAY 0 0 0 1 1 
+State.PAUSE 0 0 1 0 1 
+State.GAMEOVER 0 1 0 0 1 
+State.TRAINING 1 0 0 0 1 
 
 State Machine - |miniproject|MOUSE:inst7|mouse_state
 Name mouse_state.INPUT_PACKETS mouse_state.WAIT_CMD_ACK mouse_state.WAIT_OUTPUT_READY mouse_state.LOAD_COMMAND2 mouse_state.LOAD_COMMAND mouse_state.INHIBIT_TRANS 

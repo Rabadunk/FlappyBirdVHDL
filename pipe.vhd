@@ -59,7 +59,6 @@ pipe_X_pos <= CONV_STD_LOGIC_VECTOR(500,10);
 		-- need internal copy of vert_sync to read
 vert_sync <= vert_sync_int;
 
-
 pipe_Display: Process (pipe_X_pos, pipe_Y_pos, pixel_column, pixel_row, Size)
 BEGIN
 			-- Set pipe_on ='1' to display pipe
